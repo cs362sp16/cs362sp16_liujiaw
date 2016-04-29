@@ -1,0 +1,15 @@
+For assignment 1, I rewrite 5 cases into 5 functions, which are:
+case council_room: //#1
+     return my_CouncilRoom(handPos, currentPlayer, state);
+
+case smithy: //#2
+     return my_Smithy(handPos, currentPlayer, state);
+            
+case village: //#3
+     return my_Village(handPos, currentPlayer, state);
+
+case steward: //#4
+     return my_Steward(handPos, currentPlayer, choice1, choice2, choice3, state);
+
+case salvager: //#5
+     return my_Salvager(handPos, currentPlayer, choice1, state);

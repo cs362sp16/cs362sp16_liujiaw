@@ -1,15 +1,17 @@
-For assignment 1, I rewrite 5 cases into 5 functions, which are:
-case council_room: //#1
-     return my_CouncilRoom(handPos, currentPlayer, state);
+Unit Test 1: getCost() Passed         
 
-case smithy: //#2
-     return my_Smithy(handPos, currentPlayer, state);
-            
-case village: //#3
-     return my_Village(handPos, currentPlayer, state);
+Unit Test 2: fullDeckCount() Passed 
 
-case steward: //#4
-     return my_Steward(handPos, currentPlayer, choice1, choice2, choice3, state);
+Unit Test 3: drawCard() Passed  
 
-case salvager: //#5
-     return my_Salvager(handPos, currentPlayer, choice1, state);
+Unit Test 4: whoseTurn() Passed                  
+
+Card Test 1: smithy Failed 
+	Bug: Smithy drew wrong number of cards
+
+Card Test 2: council_room Passed  
+
+Card Test 3: village  Failed                     
+	Bug: Village added an incorrect number of actions
+
+Card Test 4: salvager Passed                    

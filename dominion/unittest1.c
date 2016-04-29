@@ -17,9 +17,7 @@ int main() {
 	for (i = 0; i < 27; i++){
 		if (getCost(i) != my_return[i]){
 			count++;
-		}else{
-			count = 0;
-		}	
+		}
 	}
 
 	if (count==0){

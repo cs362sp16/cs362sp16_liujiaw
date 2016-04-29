@@ -14,14 +14,14 @@ int main() {
 		 && myTest.numBuys == myTest.numBuys + 1 && numHandCards(&myTest) == numHandCards(&myTest) + 1){
 		printf("**************** Card Test Result *****************\n");
 		printf("**             Card Test 2: council_room         **\n");
-		printf("**                    Passed                     **\n");
+		printf("**                    Failed                     **\n");
 		printf("********************** End ************************\n");
 		printf("\n");
 	}
 	else{
 		printf("**************** Card Test Result *****************\n");
 		printf("**             Card Test 2: council_room         **\n");
-		printf("**                    Failed                     **\n");
+		printf("**                    Passed                     **\n");
 		printf("********************** End ************************\n");
 		printf("\n");
 	}

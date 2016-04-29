@@ -21,14 +21,14 @@ int main() {
 	if (myTest.playedCardCount == 1 && myTest.playedCards[0] == salvager && myTest.handCount[number] == 3 && myTest.coins == 5){
 		printf("**************** Card Test Result *****************\n");
 		printf("**             Card Test 4: salvager             **\n");
-		printf("**                    Passed                     **\n");
+		printf("**                    Failed                     **\n");
 		printf("********************** End ************************\n");
 		printf("\n");
 	}
 	else{
 		printf("**************** Card Test Result *****************\n");
 		printf("**             Card Test 4: salvager             **\n");
-		printf("**                    Failed                     **\n");
+		printf("**                    Passed                     **\n");
 		printf("********************** End ************************\n");
 		printf("\n");
 	}

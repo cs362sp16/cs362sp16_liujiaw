@@ -16,7 +16,7 @@ this test should failed.
 
 
 For my second card smithy, I also got 100% covergae. The test method is alsomost same 
-with my steward card. Since I use same test method, There was no trouble.
+with my steward card. Since I use same test method, The tet work fine.
 	Function 'my_Smithy'
 	Lines executed:100.00% of 5
 	Branches executed:100.00% of 2

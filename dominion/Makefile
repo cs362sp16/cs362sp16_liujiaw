@@ -62,5 +62,18 @@ build_test:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest3.c rngs.c -o cardtest3 -lm -g
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c cardtest4.c rngs.c -o cardtest4 -lm -g
 
+print_rand: build_rand
+	./randomtestadventurer 42 >> randomtestadventurer.out
+	./randomtestcard1 42 >> randomtestcard1.out
+	./randomtestcard2 42 >> randomtestcard2.out
+	gcov -f -b dominion.c >> randomtestadventurer.out
+	gcov -f -b dominion.c >> randomtestcard1.out
+	gcov -f -b dominion.c >> randomtestcard2.out
+
+build_rand:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestadventurer.c rngs.c -o randomtestadventurer -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c -o randomtestcard1 -lm -g
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c -o randomtestcard2 -lm -g
+
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer  player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM

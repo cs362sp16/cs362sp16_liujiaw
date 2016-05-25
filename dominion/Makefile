@@ -75,5 +75,21 @@ build_rand:
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard1.c rngs.c -o randomtestcard1 -lm -g
 	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c randomtestcard2.c rngs.c -o randomtestcard2 -lm -g
 
+
+testdominion:
+	gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c -o testdominion -lm -g
+
+hw4_1: testdominion
+	./testdominion 42 >> testdominion.out
+	gcov -f -b dominion.c >> testdominion.out
+
+diff: testdominion.c dominion.o rngs.o
+	gcc -o testdominion -std=c99 testdominion.c dominion.o rngs.o $(CFLAGS)	
+
+
+
+
+
+
 clean:
-	rm -rf *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer  player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -rf *.o playdom.exe playdom test.exe test player testdominion unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 randomtestcard1 randomtestcard2 randomtestadventurer  player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM

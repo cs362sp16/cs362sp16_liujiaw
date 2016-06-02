@@ -695,7 +695,7 @@ int my_Steward(int handPos, int currentPlayer, int choice1, int choice2, int cho
     else if (choice1 == 2)
     {
         //+2 coins
-        state->coins = state->coins + 2;
+        state->coins = state->coins + 8; //2
     }
     else
     {

@@ -42,7 +42,7 @@ else if (choice1 == 2)
 
 Agan's Rules:
 
-Understand the System
+1.  Understand the System
 	Before I debug my code, I searched the rules of dominion and the card effect of 
 	each cards especially steward. And then, I understand this game and start to debug.
 

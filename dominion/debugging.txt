@@ -3,4 +3,47 @@ Debugging report:
 For debugging my own code, I use both random test and unit test, and also try to use GDB
 to debug my code. 
 
-When I did the random test, the result of my Steward card is didn't correct. In detial, the player's corns number is incorrect, so 
+When I did the random test, the result of my Steward card is didn't correct. In detail, 
+the player's corns number is incorrect, so I will focus on debug my steward card 
+function.
+
+Before the debug, I first consider where this bug come from. the player’s coin number 
+is incorrect, so there are two assumptions, which are the game initialization is 
+incorrect and card effect (coins number change logic code) is incorrect.
+
+Now I start use GDB to debug my code:
+
+The first step is to debug initializeGame function. After I start the GDB, I set two 
+break points to track the  value is correct or not. The first break point is set in 
+line 39 of dominion.c file, and the second break point is set in line 197. Actually  
+these two points are located in the begin and end of initializeGame function. The 
+reason why I set these two break points is check player’s  initial information is 
+correct or not, such as the hand card number is reasonable or not, the hand cards are 
+reasonable. Based on my observation, initializeGame function is works fine.
+
+The second step is debug my steward card function, it called my_Smithy in dominion.c 
+file. I still set two break points. The first one is in line 689 of dominion.c file, 
+the second one is in line 709. The reason is almost same with I debug the 
+initializeGame function, which is track the coins number is correct or not. The result 
+of coins number is incorrect, so I can make sure the my_Smithy function have a bug. 
+Next I can also set two break points around coins change code. However, my_Smithy 
+function is small, so I skip this step and look the code directly. I found a bug in 
+line 698 of dominion.c, player’s coins should add 2, but it add 8 coins. That is the 
+reason why player coins number is incorrect in smithy card.
+
+Bug and correction:
+Line 698
+
+else if (choice1 == 2)
+    {
+        //+2 coins
+        state->coins = state->coins + 8; // the 8 should be 2
+    }
+
+Agan's Rules:
+
+Understand the System
+	Before I debug my code, I searched the rules of dominion and the 
+
+
+>>>>>>> Jiawei-Liu

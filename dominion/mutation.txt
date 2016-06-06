@@ -1,10 +1,29 @@
 Mutation test:
 
-For final project part 3, I choose mutation testing to test my own code. For apply mutation for my dominion.c file, I created a bash script to implement mutations. At first, I created 5 tests for each cases. Then, I can get a result into my file. For avoid the mutation test affect my origin code, I created a new directory in my personal computer, and copy my all random card tests and mutation test script, then start to test, and output the test result.
+For final project part 3, I choose mutation testing to test my own code. For apply mutation for 
+my dominion.c file, I created a bash script to implement mutations. At first, I created 5 tests 
+for each cases. Then, I can get a result into my file. For avoid the mutation test affect my 
+origin code, I created a new directory in my personal computer, and copy my all random card 
+tests and mutation test script, then start to test, and output the test result.
 
-In detail, mutation test is the method to make a small change in a program, and then gain a mutant. Then, I create 5 mutation tests for each my random test card: randomtestadventurer, randomtestcard1 (steward) and randomtestcard2 (smithy). Like I said on above, I create a bash script called mutation, and I actually create two directories. The first one is use to create a copy of my origin code, the second one is use to put all 5 mutation tests and my random test files. After that, I also create a bash script call test_all to compile my random tests, mutation tests, difference and output the result into result.out. The reason why I also compile random test file is the mutation test is need to run my random test file, and it is easier to check the error if I can see the output of random test and mutation test. Based on the result, there is no mutation have been killed, this result is surprised me, after I check my code, I understand why I got this result, because most my random test is input and output values, it is not easy to have bugs. 
+In detail, mutation test is the method to make a small change in a program, and then gain a 
+mutant. Then, I create 5 mutation tests for each my random test card: randomtestadventurer, 
+randomtestcard1 (steward) and randomtestcard2 (smithy). Like I said on above, I create a bash 
+script called mutation, and I actually create two directories. The first one is use to create a 
+copy of my origin code, the second one is use to put all 5 mutation tests and my random test 
+files. After that, I also create a bash script call test_all to compile my random tests, 
+mutation tests, difference and output the result into result.out. The reason why I also compile 
+random test file is the mutation test is need to run my random test file, and it is easier to 
+check the error if I can see the output of random test and mutation test. Based on the result, 
+there is no mutation have been killed, this result is surprised me, after I check my code, I 
+understand why I got this result, because most my random test is input and output values, it is 
+not easy to have bugs. 
 
-Actually, all my three random tests have a common problem based on my mutation, which is my random test didn’t cover enough. For example, I only output the hand count, deck count and card number in my random test. Therefore, for the future, I may need to test more values such as coins’ number, discard cards, player cards, etc. Without this common error, my randomtestcard1 and randomtestcard2 are works fine, and I am so glad to see this result.
+Actually, all my three random tests have a common problem based on my mutation, which is my 
+random test didn’t cover enough. For example, I only output the hand count, deck count and card 
+number in my random test. Therefore, for the future, I may need to test more values such as 
+coins’ number, discard cards, player cards, etc. Without this common error, my randomtestcard1 
+and randomtestcard2 are works fine, and I am so glad to see this result.
 
 Test results:
 ********Mutation Test 1*******

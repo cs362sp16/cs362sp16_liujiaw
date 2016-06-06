@@ -3,7 +3,7 @@ Debugging report:
 For debugging my own code, I use both random test and unit test, and also try to use GDB
 to debug my code. 
 
-When I did the random test, the result of my Steward card is didn't correct. In detail, 
+When I did the random test, the result of my Steward card is didn't correct. In detail,
 the player's corns number is incorrect, so I will focus on debug my steward card 
 function.
 
@@ -43,6 +43,20 @@ else if (choice1 == 2)
 Agan's Rules:
 
 Understand the System
-	Before I debug my code, I searched the rules of dominion and the 
+	Before I debug my code, I searched the rules of dominion and the card effect of 
+	each cards especially steward. And then, I understand this game and start to debug.
 
+2.  Make it Fail
+	After play the dominion game, the game result is totally wrong, so it is very easy 
+	to see there is some bugs in the code.
+
+5.  Change One Thing at a Time
+	Every time I debug my code, I only consider the possible error location and set two 
+	break points to check the value and result. I didn’t check more than one possible 
+	error in one time.
+
+8.  Get a Fresh View
+	GDB is a helpful tool, but set location of break point is a little difficult, and 
+	it takes me few time, since my_Smithy function didn’t have many codes, so the bug 
+	is not very difficult to find, but GDB takes me few time to work.
 

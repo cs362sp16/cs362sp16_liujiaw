@@ -1,0 +1,24 @@
+#!/bin/bash -e
+
+myHome=$(dirname "$0")
+
+gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testDominion1 -lm -g
+./testdominion $3 >> first.out
+mv first.out $myHome
+gcov dominion.c 
+
+cd second_dir
+gcc -fprofile-arcs -ftest-coverage -Wall -std=c99 dominion.c testdominion.c rngs.c interface.c -o testDominion1 -lm -g
+./testdominion $3 >> second.out
+mv second.out $myHome
+gcov dominion.c 
+
+cd $myHome
+diff -s -y first.out second.out >> diffdomintion.out
+results=`tail -n 1 < diff.out`
+if["$results" == "Files first.out and second.out are identical"]; 
+	then
+		echo "TEST PASSED"
+	else
+		echo "TEST FAILED"
+fi

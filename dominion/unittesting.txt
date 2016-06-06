@@ -1,0 +1,33 @@
+File 'unittest1.c'
+Lines executed:70.83% 
+
+File 'unittest2.c'
+Lines executed:68.75% 
+
+File 'unittest3.c'
+Lines executed:68.75%
+
+File 'unittest4.c'
+Lines executed:70.59% 
+
+File 'cardtest1.c'
+Lines executed:61.11%
+
+File 'cardtest2.c'
+Lines executed:64.71%
+
+File 'cardtest3.c'
+Lines executed:62.50%
+
+File 'cardtest4.c'
+Lines executed:73.91% 
+
+After use gcov to test my code, the result is between 62% and 73%, since not all lines will be test, such as initialize values or return values, therefore, I think this coverage is fine. But if the coverage is too low, it may cause that some bugs cannot be found.
+
+Command: make testall
+
+Overall coverage of dominion.c
+File 'dominion.c'
+Lines executed:27.40% of 646
+
+In conslusion, my overall coverage is 27.40%, I think the reason is I only write 4 unit tests and 4 card tests for dominion.c, I haven't cover all of code. But I believe that unit test is a good way to find bugs, complier can only help us to fild syntax error, but it don't work for logic error. So write some small test codes is an effective method to test the code is correct or not. Before write test code, we need to understand how does this funciton works, so we can start the test. In addition, the test code won't include in the origin C file, so it will not make the C file larger.

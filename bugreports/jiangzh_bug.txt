@@ -1,0 +1,14 @@
+Bug #3
+
+After my random and unit test, the village card don't return a correct numActions, so 
+there is a bug in the village crad.
+
+In card village, the numActions should +2, but the code always give a reuslt with one 
+more action (+3).
+
+Code and correction:
+In line 961
+
+else{//Action Card
+	  state->numActions = state->numActions + 2; // the 2 should be replace by 3
+	}

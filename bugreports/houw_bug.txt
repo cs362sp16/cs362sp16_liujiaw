@@ -1,0 +1,33 @@
+Bug #1:
+
+After my unit and random test, my test shows the hand card always left one card in 
+player's hand, so there is one bug in "houw" code. 
+
+In function "_cardEffect_minion", after the minion card, the user always have one same 
+card with the previous hand cards.
+
+Code and correction: 
+In line 708
+
+while(numHandCards(state) > 1) // the correct number should be 0
+	    {
+	      discardCard(handPos, currentPlayer, state, 0);
+	    }
+
+
+
+Bug #2:
+
+After my unit and random test, the test shows that the fourth player's handcard number 
+is never change when the total player number is more that 3. 
+
+In the function "_cardEffect_smithy", after draw card, the fourth player's hand card 
+number is not change.
+
+Code and correction: 
+In line 665
+
+	int i;
+	for (i = 0; i < 3; i++){ // the 3 should be replace by 4
+		drawCard(currentPlayer, state);
+	}

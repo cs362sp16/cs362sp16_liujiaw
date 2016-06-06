@@ -1,0 +1,19 @@
+CS 362 Assignment 4
+Jiawei Liu
+05/24/2016
+
+There is no difference if I use diff test my code and one of my classmate code, and with the seed 42. However, if I try to other seed 
+such as 10 and 12, my program gives me FAILD. In addition, sometimes the program will shows segmentation fault to me. I think since there
+are few bugs in dominion.c, that may cause my test crash. Since the output was same when the seed is 42, so it is easy to know that both
+of us are correct.
+
+After using diff, the result file is very difficult to read and the file is very long. That is one reason of differential testing is not
+an ideal test. The second reason is that all results are based on random tests, so the result will be different. so it is very hard to
+compare different files.
+
+For my code coverage, I got almost 68% coverage, and it above 60%, although 68% is not very high, but it achieved the requirements.
+
+Coverage:
+File 'dominion.c'
+Lines executed:67.86% of 646
+dominion.c:creating 'dominion.c.gcov'

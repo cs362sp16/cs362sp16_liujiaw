@@ -1,0 +1,27 @@
+For the adventurer, I didn't get trouble on line coverage, so there was no some big 
+improvements.
+
+For the dominion.c, I got 21.96% coverage, and this number is alomost same with my unit 
+test coverage.
+File 'dominion.c'
+Lines executed:21.96% of 560
+
+For my first card steward, I got 100% coverage on the test and I didn't get trouble on 
+the testing. the method that I test is that I print out the Hand, deck, card and corn 
+number of before and after using card. If the numbers didn't have a proper change, so 
+this test should failed.
+	Function 'my_Smithy'
+	Lines executed:100.00% of 5
+	Branches executed:100.00% of 2
+
+
+For my second card smithy, I also got 100% covergae. The test method is alsomost same 
+with my steward card. Since I use same test method, The tet work fine.
+	Function 'my_Smithy'
+	Lines executed:100.00% of 5
+	Branches executed:100.00% of 2
+
+In my opinion, random test is better than unit test, since random can test more different 
+situations than unit test. However, in a small program, unit test may easy to implement 
+since random test is a huge program.
+

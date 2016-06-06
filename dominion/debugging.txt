@@ -1,0 +1,6 @@
+Debugging report:
+
+For debugging my own code, I use both random test and unit test, and also try to use GDB
+to debug my code. 
+
+When I did the random test, the result of my Steward card is didn't correct. In detial, the player's corns number is incorrect, so 

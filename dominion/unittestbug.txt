@@ -1,0 +1,17 @@
+Unit Test 1: getCost() Passed         
+
+Unit Test 2: fullDeckCount() Passed 
+
+Unit Test 3: drawCard() Passed  
+
+Unit Test 4: whoseTurn() Passed                  
+
+Card Test 1: smithy Failed 
+	Bug: Smithy drew wrong number of cards
+
+Card Test 2: council_room Passed  
+
+Card Test 3: village  Failed                     
+	Bug: Village added an incorrect number of actions
+
+Card Test 4: salvager Passed                    
